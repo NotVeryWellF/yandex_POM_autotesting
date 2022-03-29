@@ -36,3 +36,13 @@ class BasePage:
         WebDriverWait(self.driver, Config.TIME_WAIT).until(EC.title_contains(text))
         return self.driver.title
 
+    def get_url(self, url):
+        WebDriverWait(self.driver, Config.TIME_WAIT).until(EC.url_changes(url))
+        return self.driver.current_url
+
+    def get_element_attribute(self, by_locator, attribute):
+        element = WebDriverWait(self.driver, Config.TIME_WAIT).until(EC.visibility_of_element_located(by_locator))
+        return element.get_attribute(attribute)
+
+    def go_to_url(self, url):
+        self.driver.get(url)

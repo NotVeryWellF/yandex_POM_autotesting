@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class SearchPage(BasePage):
     """Search page of the Yandex"""
-    SEARCH_RESULT_TABLE = (By.ID, "search-result")
+    SEARCH_RESULT_TABLE = (By.CLASS_NAME, "search-result")
     RESULTS_IN_TABLE = (By.CLASS_NAME, "Link_theme_normal")
 
     def __init__(self, driver):

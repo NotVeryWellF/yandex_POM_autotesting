@@ -12,4 +12,4 @@ def init_driver(request):
     request.cls.driver = web_driver
     web_driver.implicitly_wait(Config.TIME_WAIT)
     yield
-    web_driver.close()
+    web_driver.quit()
