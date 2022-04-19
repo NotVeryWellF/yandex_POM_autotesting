@@ -1,8 +1,5 @@
-from config.config import Config
 from pages.BasePage import BasePage
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 
 class ImageSearchPage(BasePage):
